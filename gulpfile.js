@@ -4,8 +4,7 @@
 
 // If a file is compiled otherwise update it.
 // ///////////////////////////////////////////////////////////////////////
-const { watch, series, src, dest} = require('gulp');
-
+const { watch, series, src, dest } = require('gulp');
 
 // ///////////////////////////////////////////////////////////////////////
 // Added Dependencies
@@ -18,7 +17,6 @@ const notify = require('gulp-notify');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 
-
 // ///////////////////////////////////////////////////////////////////////
 // Styles
 // ///////////////////////////////////////////////////////////////////////
@@ -28,10 +26,6 @@ const componentStylesPath = 'assets/dist/styles/components/';
 
 const pageStyles = 'assets/styles/pages/*.scss';
 const pageStylesPath = 'assets/dist/styles/pages/';
-
-const vendorStyles = 'assets/styles/vendor/*.css';
-const vendorStylesPath = 'assets/dist/styles/vendor/';
-
 
 // ///////////////////////////////////////////////////////////////////////
 // Scripts
@@ -45,111 +39,68 @@ const componentScriptsPath = 'assets/dist/scripts/components/';
 const pageScripts = 'assets/scripts/pages/*.js';
 const pageScriptsPath = 'assets/dist/scripts/pages/';
 
-const vendorScripts = 'assets/scripts/vendor/*.js';
-const vendorScriptsPath = 'assets/dist/scripts/vendor/';
-
-
 ///////////////////////////////////////////////
 // Tasks
 //////////////////////////////////////////////
 
 function buildScripts(assets, path) {
 	return src(assets)
-	.pipe(uglify())
-	.pipe(concat('global.js'))
-	.pipe(dest(path))
-	.pipe(notify('Build Complete: buildScripts'));
+		.pipe(uglify())
+		.pipe(concat('global.js'))
+		.pipe(dest(path))
+		.pipe(notify('Build Complete: buildScripts'));
 }
 
 function buildPageScripts(assets, path) {
-	return src(assets)
-	.pipe(uglify())
-	.pipe(dest(path))
-	.pipe(notify('Build Complete: buildPageScripts'));
+	return src(assets).pipe(uglify()).pipe(dest(path)).pipe(notify('Build Complete: buildPageScripts'));
 }
 
 function buildComponentScripts(assets, path) {
-	return src(assets)
-	.pipe(uglify())
-	.pipe(dest(path))
-	.pipe(notify('Build Complete: buildComponentScripts'));
+	return src(assets).pipe(uglify()).pipe(dest(path)).pipe(notify('Build Complete: buildComponentScripts'));
 }
-
-function buildVendorScripts(assets, path) {
-	return src(assets)
-	.pipe(uglify())
-	.pipe(dest(path))
-	.pipe(notify('Build Complete: buildVendorScripts'));
-}
-
 function buildStyles(assets, path, file = 'false') {
 	var concating = false;
 
-	if(file != 'false') {
-		concating = true
+	if (file != 'false') {
+		concating = true;
 	}
 
 	return src(assets)
-	.pipe(sass().on('error', sass.logError))
-	.pipe(autoprefixer())
-	.pipe(cleanCSS())
-	.pipe(cond(concating, concat(file), console.log('else')))
-	.pipe(dest(path))
-	.pipe(notify('Build Complete: BuildStyles'));
+		.pipe(sass().on('error', sass.logError))
+		.pipe(autoprefixer())
+		.pipe(cleanCSS())
+		.pipe(cond(concating, concat(file), console.log('else')))
+		.pipe(dest(path))
+		.pipe(notify('Build Complete: BuildStyles'));
 }
-
-function buildVendorStyles(assets, path, file = 'false') {
-	var concating = false;
-
-	if(file != 'false') {
-		concating = true
-	}
-
-	return src(assets)
-	.pipe(autoprefixer())
-	.pipe(cleanCSS())
-	.pipe(cond(concating, concat(file), console.log('else')))
-	.pipe(dest(path))
-	.pipe(notify('Build Complete: BuildVendorStyles'));
-}
-
 
 // ///////////////////////////////////////////////////////////////////////
 // Exports
 // ///////////////////////////////////////////////////////////////////////
-exports.default = function() {
+exports.default = function () {
 	// Styles
 	// ------------------------------------------
-	watch('assets/styles/components/*.scss', function(cb) {
+	watch('assets/styles/components/*.scss', function (cb) {
 		buildStyles(componentStyles, componentStylesPath);
 		cb();
 	});
-	watch('assets/styles/pages/*.scss', function(cb) {
+	watch('assets/styles/pages/*.scss', function (cb) {
 		buildStyles(pageStyles, pageStylesPath);
-		cb();
-	});
-	watch('assets/styles/vendor/*.css', function(cb) {
-		buildVendorStyles(vendorStyles, vendorStylesPath);
 		cb();
 	});
 
 	// Scripts
 	// ------------------------------------------
-	watch('assets/scripts/base/*.js', function(cb) {
+	watch('assets/scripts/base/*.js', function (cb) {
 		buildScripts(baseScripts, baseScriptsPath);
 		cb();
 	});
-	watch('assets/scripts/components/*.js', function(cb) {
+	watch('assets/scripts/components/*.js', function (cb) {
 		buildComponentScripts(componentScripts, componentScriptsPath);
 		cb();
 	});
-	watch('assets/scripts/pages/*.js', function(cb) {
+	watch('assets/scripts/pages/*.js', function (cb) {
 		buildPageScripts(pageScripts, pageScriptsPath);
 		cb();
 	});
-	watch('assets/scripts/vendor/*.js', function(cb) {
-		buildVendorScripts(vendorScripts, vendorScriptsPath);
-		cb();
-	});
-
 };

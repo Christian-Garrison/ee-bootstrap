@@ -1,0 +1,11 @@
+{
+	"prettier.requireConfig": true,
+	"editor.formatOnSave": true,
+	"css.validate": false,
+	"scss.validate": false,
+	"less.validate": false,
+	"git.ignoreLimitWarning": true,
+	"prettier.singleQuote": true,
+	"prettier.jsxSingleQuote": true,
+	"prettier.jsxBracketSameLine": true
+}

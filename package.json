@@ -8,6 +8,10 @@
   },
   "author": "Christian Garrison",
   "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.2",
+    "jquery": "^3.6.0"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
