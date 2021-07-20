@@ -7,12 +7,33 @@
 		border-radius: 5px;
 		margin: 10px;
 		padding: 30px;
+		animation: slidein 2.5s;
+
+		@keyframes slidein {
+			from {
+				transform: translateX(-100%);
+			}
+			to {
+				transform: translateX(0%);
+			}
+		}
 
 		@media screen and (min-width: 768px) {
 			width: calc(50% - 20px);
 		}
 		@media screen and (min-width: 992px) {
 			width: calc(33.33333% - 20px);
+		}
+	}
+}
+
+.blog-content {
+	&_btn {
+		padding: 10px 20px;
+		transition: ease-in-out 0.3s;
+
+		&:hover {
+			background-color: rgb(83, 201, 248);
 		}
 	}
 }
