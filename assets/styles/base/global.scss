@@ -1,0 +1,77 @@
+@import './helpers.scss';
+@import 'reset';
+
+body {
+	font-size: $font-size;
+	font-family: $font-family;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+	font-weight: 800;
+}
+
+h1 {
+	font-size: calc(2.25rem + 2vw);
+}
+
+h2 {
+	font-size: calc(2rem + 1.5vw);
+}
+
+h3 {
+	font-size: calc(1.75rem + 1vw);
+}
+
+h4 {
+	font-size: calc(1.5rem + 0.5vw);
+}
+
+h5 {
+	font-size: 1.25rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
+p {
+	line-height: 1.5;
+}
+
+section {
+	padding: $section-padding;
+}
+
+section .section-details {
+	.title {
+		border-left: 10px solid $black;
+		margin-bottom: 15px;
+		padding-left: 10px;
+	}
+}
+
+section.flex-section {
+	.flex-item {
+		display: flex;
+		flex-direction: column;
+		border: 1.5px solid $black;
+		border-radius: 0;
+		width: calc(100% - 30px);
+		margin: 15px;
+		padding: 0;
+
+		.flex-content {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			padding: 30px;
+		}
+
+		@media screen and ($min-md) {
+			width: calc(50% - 30px);
+		}
+		@media screen and ($min-lg) {
+			width: calc(33.33333% - 30px);
+		}
+	}
+}

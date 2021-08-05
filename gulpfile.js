@@ -1,6 +1,6 @@
 // ///////////////////////////////////////////////////////////////////////
 // Structure for compiled assets should be:
-// /dist/(css|js)/(base|pages|vendor)/filename.extension
+// /dist/(scripts/styles)/(base|components|pages)/filename.extension
 
 // If a file is compiled otherwise update it.
 // ///////////////////////////////////////////////////////////////////////
@@ -14,12 +14,15 @@ const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
 const cond = require('gulp-cond');
 const notify = require('gulp-notify');
-const sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 const uglify = require('gulp-uglify');
 
 // ///////////////////////////////////////////////////////////////////////
 // Styles
 // ///////////////////////////////////////////////////////////////////////
+
+const globalStyles = 'assets/styles/base/global.scss';
+const globalStylesPath = 'assets/dist/styles/base/';
 
 const componentStyles = 'assets/styles/components/*.scss';
 const componentStylesPath = 'assets/dist/styles/components/';
@@ -30,6 +33,7 @@ const pageStylesPath = 'assets/dist/styles/pages/';
 // ///////////////////////////////////////////////////////////////////////
 // Scripts
 // ///////////////////////////////////////////////////////////////////////
+
 const baseScripts = 'assets/scripts/base/*.js';
 const baseScriptsPath = 'assets/dist/scripts/base/';
 
@@ -58,6 +62,7 @@ function buildPageScripts(assets, path) {
 function buildComponentScripts(assets, path) {
 	return src(assets).pipe(uglify()).pipe(dest(path)).pipe(notify('Build Complete: buildComponentScripts'));
 }
+
 function buildStyles(assets, path, file = 'false') {
 	var concating = false;
 
@@ -80,6 +85,10 @@ function buildStyles(assets, path, file = 'false') {
 exports.default = function () {
 	// Styles
 	// ------------------------------------------
+	watch('assets/styles/base/global.scss', function (cb) {
+		buildStyles(globalStyles, globalStylesPath);
+		cb();
+	});
 	watch('assets/styles/components/*.scss', function (cb) {
 		buildStyles(componentStyles, componentStylesPath);
 		cb();

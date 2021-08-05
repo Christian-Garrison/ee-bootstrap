@@ -1,25 +1,23 @@
 {
-  "name": "template",
+  "name": "project-template",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
+    "clean:install": "rm -rf node_modules/ && npm i",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Christian Garrison",
+  "author": "Christian Garrison <cg@buildmidwestern.com>",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.0.2",
-    "jquery": "^3.6.0"
-  },
-  "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-cond": "^1.0.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-uglify": "^3.0.2"
+    "gulp-notify": "^4.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.37.5"
   }
 }
