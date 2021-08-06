@@ -1,71 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- Bootstrap CSS -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
-		<!-- Font Awesome -->
-		<script src="https://kit.fontawesome.com/1802197d5e.js" crossorigin="anonymous"></script>
-		<!-- Styles -->
-		<link rel="stylesheet" href="/assets/dist/styles/base/global.css" />
-		<title>Project Template</title>
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1802197d5e.js" crossorigin="anonymous"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/dist/styles/base/global.css" />
+    <title>Project Template</title>
+  </head>
 
-	<body>
-		<!-- Header Element -->
-		<header id="site-header" class="site-header">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-6 col-lg-6"></div>
-					<div class="col-md-6 col-lg-6"></div>
-				</div>
-			</div>
-		</header>
-		<!-- Main Element -->
-		<main id="site-main" class="site-main">
-			<div class="container">
-				<!-- Start of Section -->
-				<section class="flex-section">
-					<div class="section-details">
-						<h2 class="title">Flex Grid</h2>
-						<h4 class="subtitle">We have our headings <i class="far fa-compass"></i></h4>
-					</div>
-					<div class="row">
-						<div class="flex-item">
-							<div class="flex-content">
-								<h3 class="mb-3">Heading</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
-							</div>
-						</div>
-						<div class="flex-item">
-							<div class="flex-content">
-								<h3 class="mb-3">Heading</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
-							</div>
-						</div>
-						<div class="flex-item">
-							<div class="flex-content">
-								<h3 class="mb-3">Heading</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
-							</div>
-						</div>
-						<div class="flex-item">
-							<div class="flex-content">
-								<h3 class="mb-3">Heading</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- End of Section -->
-			</div>
-		</main>
-		<!-- Footer Element -->
-		<footer id="site-footer" class="site-footer">
-			<div class="container-fluid"></div>
-		</footer>
-		<!-- Scripts -->
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	</body>
+  <body>
+    <!-- Header Element -->
+    <header id="site-header" class="site-header">
+      <div class="container-fluid">
+        
+      </div>
+    </header>
+    <!-- Main Element -->
+    <main id="site-main" class="site-main">
+      <div class="hero">
+        <div class="hero-slider">
+          <div class="hero-slide">
+            <div class="slide-image" style="background-image: url(/public/images/background-unsplash-1.jpg);"></div>
+          </div>
+          <div class="hero-slide">
+            <div class="slide-image" style="background-image: url(/public/images/background-unsplash-2.jpg);"></div>
+          </div>
+          <div class="hero-slide">
+            <div class="slide-image" style="background-image: url(/public/images/background-unsplash-3.jpg);"></div>
+          </div>
+          <div class="hero-slide">
+            <div class="slide-image" style="background-image: url(/public/images/background-unsplash-4.jpg);"></div>
+          </div>
+        </div>
+        <div class="container slider-nav">
+          <button class="prev-slide">&#60</button>
+          <div class="thumbnails"></div>
+          <button class="next-slide">&#62</button>
+        </div>
+      </div>
+      <div class="container">
+        <!-- Start of Section -->
+        <section class="flex-section">
+          <div class="section-details">
+            <h2 class="title">Flex Grid</h2>
+            <h4 class="subtitle">We have our headings <i class="far fa-compass"></i></h4>
+          </div>
+          <div class="row">
+            <div class="flex-item">
+              <a href="#" class="flex-anchor">
+                <div class="flex-content">
+                  <h3 class="mb-3">Heading</h3>
+                  <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
+                  <button>Read More</button>
+                </div>
+              </a>
+            </div>
+            <div class="flex-item">
+              <a href="#" class="flex-anchor">
+                <div class="flex-content">
+                  <h3 class="mb-3">Heading</h3>
+                  <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
+                  <button>Read More</button>
+                </div>
+              </a>
+            </div>
+            <div class="flex-item">
+              <a href="#" class="flex-anchor">
+                <div class="flex-content">
+                  <h3 class="mb-3">Heading</h3>
+                  <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
+                  <button>Read More</button>
+                </div>
+              </a>
+            </div>
+            <div class="flex-item">
+              <a href="#" class="flex-anchor">
+                <div class="flex-content">
+                  <h3 class="mb-3">Heading</h3>
+                  <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
+                  <button>Read More</button>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- End of Section -->
+        <!-- Start of Section -->
+        <!-- <section>
+          
+        </section> -->
+        <!-- End of Section -->
+      </div>
+    </main>
+    <!-- Footer Element -->
+    <footer id="site-footer" class="site-footer">
+      <div class="container-fluid">
+        <p class="text-center">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Front-End Adventures | All Rights Reserved</p>
+      </div>
+    </footer>
+    <div class="light-box-wrapper">
+      <div class="light-box container">
+        <button class="close-light-box">x</button>
+        <div class="light-box-items"></div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/assets/dist/scripts/components/slider.js"></script>
+    <script src="/assets/dist/scripts/components/light-box.js"></script>
+    <script>
+      $(function(){
+        function initSlider() {
+          $('.slide-image').clone().addClass('light-box-item').appendTo('.thumbnails');
+        }
+        // Initialize Slider Function
+        initSlider();
+
+        // Variables
+        let slideWidth;
+        let thumbnailWidth;
+        const slideCount = $('.hero-slide').length;
+        const lastSlide = slideCount - 1;
+
+        $('.hero-slide').prop('id', function (index){
+          return index;
+        });
+
+        if (slideCount == 1) {
+          $('.prev-slide').hide();
+          $('.next-slide').hide();
+        }
+
+        // Grab slide width on page load
+        slideWidth = $('.hero-slide').width();
+        thumbnailWidth = $('.thumbnails .slide-image').width();
+        // Update slide width on window resize
+        $(window).on('resize', function() {
+          slideWidth = $('.hero-slide').width();
+          thumbnailWidth = $('.thumbnails .slide-image').width();
+        });
+
+        // Animate Slider Left
+        if ($('.hero-slide.current').attr('id') != 0) {
+          $('body').delegate('.prev-slide', 'click', function () {
+            // prettier-ignore
+            $('.thumbnails .slide-image').animate({
+              left: `+=${thumbnailWidth + 30}`,
+            }, 1000, function() {
+              // Animation complete
+            });
+            // prettier-ignore
+            $('.hero-slide').animate({
+              left: `+=${slideWidth}`,
+            }, 1000, function() {
+              // Animation complete
+            });
+          });
+        };
+
+        // Animate Slider Right
+        if ($('.hero-slide.current').attr('id') != lastSlide) {
+          $('body').delegate('.next-slide', 'click', function () {
+            // prettier-ignore
+            $('.thumbnails .slide-image').animate({
+              left: `-=${thumbnailWidth + 30}`,
+            }, 1000, function() {
+              // Animation complete
+            });
+            // prettier-ignore
+            $('.hero-slide').animate({
+              left: `-=${slideWidth}`,
+            }, 1000, function() {
+              // Animation complete
+            });
+          });
+        };
+      });
+    </script>
+  </body>
 </html>

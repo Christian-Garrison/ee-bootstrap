@@ -6,6 +6,10 @@ body {
 	font-family: $font-family;
 }
 
+.no-scroll {
+	overflow: hidden;
+}
+
 :is(h1, h2, h3, h4, h5, h6) {
 	font-weight: 800;
 }
@@ -38,6 +42,123 @@ p {
 	line-height: 1.5;
 }
 
+button {
+	color: $black;
+	background-color: $primary-color;
+	font-weight: 700;
+	position: relative;
+	padding: 15px 30px;
+	transition: ease-in-out 0.3s;
+
+	&:hover {
+		color: darken($black, 50%);
+		background-color: lighten($primary-color, 10%);
+	}
+}
+
+.site-header,
+.site-footer {
+	padding: 30px 0;
+}
+
+.site-footer {
+	color: $gray-50;
+	background-color: $gray-900;
+}
+
+.hero-slider {
+	display: flex;
+	height: 50vh;
+	overflow: hidden;
+
+	.hero-slide {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: inherit;
+
+		.slide-image {
+			background-size: cover;
+			background-position: center;
+			width: inherit;
+			height: 100%;
+		}
+	}
+}
+
+.slider-nav {
+	display: flex;
+	align-items: center;
+}
+
+.thumbnails {
+	display: flex;
+	width: 100%;
+	margin: 15px;
+	overflow: hidden;
+
+	.slide-image {
+		display: flex;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		top: 0;
+		left: 0;
+		flex: 0 0 calc(100% - 30px);
+		height: 175px;
+		margin: 15px;
+		cursor: pointer;
+
+		@media screen and ($min-md) {
+			flex: 0 0 calc(50% - 30px);
+		}
+		@media screen and ($min-lg) {
+			flex: 0 0 calc(33.33333% - 30px);
+		}
+	}
+}
+
+.light-box-wrapper {
+	background-color: rgba($color: $black, $alpha: 0.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	opacity: 0;
+	transition: ease-in-out 0.3s;
+	z-index: -9999;
+
+	&.active {
+		opacity: 1;
+		z-index: 9999;
+	}
+
+	.light-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+		height: 100%;
+	}
+
+	.light-box-items {
+		display: flex;
+		height: auto;
+		width: 100%;
+		margin: 15px 0;
+	}
+
+	.light-box-image {
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 50vh;
+		width: 100%;
+	}
+}
+
 section {
 	padding: $section-padding;
 }
@@ -59,6 +180,15 @@ section.flex-section {
 		width: calc(100% - 30px);
 		margin: 15px;
 		padding: 0;
+
+		.flex-anchor {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+
+			&:hover {
+			}
+		}
 
 		.flex-content {
 			display: flex;

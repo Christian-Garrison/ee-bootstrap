@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "clean:install": "rm -rf node_modules/ && npm i",
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Christian Garrison <cg@buildmidwestern.com>",
