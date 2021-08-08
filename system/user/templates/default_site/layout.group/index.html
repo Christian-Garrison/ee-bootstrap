@@ -14,8 +14,8 @@
 
   <body>
     <!-- Header Element -->
-    <header id="site-header" class="site-header">
-      <div class="container-fluid">
+    <header id="site-header" class="site-header container-fluid">
+      <div class="container">
         
       </div>
     </header>
@@ -36,69 +36,131 @@
             <div class="slide-image" style="background-image: url(/public/images/background-unsplash-4.jpg);"></div>
           </div>
         </div>
-        <div class="container slider-nav">
-          <button class="prev-slide">&#60</button>
-          <div class="thumbnails"></div>
-          <button class="next-slide">&#62</button>
-        </div>
       </div>
-      <div class="container">
+      <div class="container-fluid slider-nav">
+        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+        <div class="container mx-0 px-0">
+          <div class="thumbnails-wrapper">
+            <div class="thumbnails"></div>
+          </div>
+        </div>
+        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="container" style="padding-left: 30px; padding-right: 30px;">
         <!-- Start of Section -->
         <section class="flex-section">
           <div class="section-details">
             <h2 class="title">Flex Grid</h2>
-            <h4 class="subtitle">We have our headings <i class="far fa-compass"></i></h4>
+            <h4 class="subtitle">We have our headings <i class="far fa-compass subtitle-icon"></i></h4>
           </div>
           <div class="row">
             <div class="flex-item">
               <a href="#" class="flex-anchor">
-                <div class="flex-content">
-                  <h3 class="mb-3">Heading</h3>
-                  <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
+                <div class="flex-content card">
+                  <div class="card-icon mb-3"><i class="fal fa-file-alt"></i></div>
+                  <h3 class="card-heading mb-3">Heading</h3>
+                  <p class="card-body mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
                   <button>Read More</button>
                 </div>
               </a>
             </div>
             <div class="flex-item">
               <a href="#" class="flex-anchor">
-                <div class="flex-content">
-                  <h3 class="mb-3">Heading</h3>
-                  <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
+                <div class="flex-content card">
+                  <div class="card-icon mb-3"><i class="fal fa-file-alt"></i></div>
+                  <h3 class="card-heading mb-3">Heading</h3>
+                  <p class="card-body mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
                   <button>Read More</button>
                 </div>
               </a>
             </div>
             <div class="flex-item">
               <a href="#" class="flex-anchor">
-                <div class="flex-content">
-                  <h3 class="mb-3">Heading</h3>
-                  <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
+                <div class="flex-content card">
+                  <div class="card-icon mb-3"><i class="fal fa-file-alt"></i></div>
+                  <h3 class="card-heading mb-3">Heading</h3>
+                  <p class="card-body mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
                   <button>Read More</button>
                 </div>
               </a>
             </div>
             <div class="flex-item">
               <a href="#" class="flex-anchor">
-                <div class="flex-content">
-                  <h3 class="mb-3">Heading</h3>
-                  <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
+                <div class="flex-content card">
+                  <div class="card-icon mb-3"><i class="fal fa-file-alt"></i></div>
+                  <h3 class="card-heading mb-3">Heading</h3>
+                  <p class="card-body mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
+                  <button>Read More</button>
+                </div>
+              </a>
+            </div>
+            <div class="flex-item">
+              <a href="#" class="flex-anchor">
+                <div class="flex-content card">
+                  <div class="card-icon mb-3"><i class="fal fa-file-alt"></i></div>
+                  <h3 class="card-heading mb-3">Heading</h3>
+                  <p class="card-body mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
+                  <button>Read More</button>
+                </div>
+              </a>
+            </div>
+            <div class="flex-item">
+              <a href="#" class="flex-anchor">
+                <div class="flex-content card">
+                  <div class="card-icon mb-3"><i class="fal fa-file-alt"></i></div>
+                  <h3 class="card-heading mb-3">Heading</h3>
+                  <p class="card-body mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quibusdam error minus excepturi repellat fuga hic quasi atque, ea corrupti modi, magni sapiente fugiat! Ipsa error necessitatibus vitae repellat fuga.</p>
                   <button>Read More</button>
                 </div>
               </a>
             </div>
           </div>
         </section>
-        <!-- End of Section -->
-        <!-- Start of Section -->
-        <!-- <section>
-          
-        </section> -->
+        <!-- End of Section / Start of Section -->
+        <section class="timeline-section">
+          <div class="section-details">
+            <h2 class="title">Timeline</h2>
+            <!-- <h4 class="subtitle"></h4> -->
+          </div>
+          <div id="timeline" class="timeline">
+            <div class="timeline-line"></div>
+            <div class="timeline-item">
+              <div class="timeline-date">
+                <span class="year">2010</span>
+                February 20<sup>th</sup>
+                <span class="deco"></span>
+              </div>
+              <div class="card">
+                <h3 class="card-heading mb-3">Founded</h3>
+                <p class="card-body mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam atque vero et blanditiis accusamus, eos architecto impedit ipsa, quae similique quos iusto obcaecati a placeat repudiandae harum pariatur vitae at?</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">
+                <span class="year">2015</span>
+                June 15<sup>th</sup>
+                <span class="deco"></span>
+              </div>
+              <div class="card">
+                <h3 class="card-heading mb-3">Founded</h3>
+                <p class="card-body mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam atque vero et blanditiis accusamus, eos architecto impedit ipsa, quae similique quos iusto obcaecati a placeat repudiandae harum pariatur vitae at?</p>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- End of Section -->
       </div>
     </main>
     <!-- Footer Element -->
     <footer id="site-footer" class="site-footer">
-      <div class="container-fluid">
+      <div class="container footer-content">
+        <div class="social-media mb-3">
+          <a href="#" class="social-media-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-media-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-media-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-media-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-media-icon"><i class="fab fa-github"></i></a>
+        </div>
         <p class="text-center">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Front-End Adventures | All Rights Reserved</p>
       </div>
     </footer>
@@ -110,75 +172,13 @@
     </div>
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/assets/dist/scripts/pages/index.js"></script>
     <script src="/assets/dist/scripts/components/slider.js"></script>
     <script src="/assets/dist/scripts/components/light-box.js"></script>
     <script>
-      $(function(){
-        function initSlider() {
-          $('.slide-image').clone().addClass('light-box-item').appendTo('.thumbnails');
-        }
+      $(function () {
         // Initialize Slider Function
         initSlider();
-
-        // Variables
-        let slideWidth;
-        let thumbnailWidth;
-        const slideCount = $('.hero-slide').length;
-        const lastSlide = slideCount - 1;
-
-        $('.hero-slide').prop('id', function (index){
-          return index;
-        });
-
-        if (slideCount == 1) {
-          $('.prev-slide').hide();
-          $('.next-slide').hide();
-        }
-
-        // Grab slide width on page load
-        slideWidth = $('.hero-slide').width();
-        thumbnailWidth = $('.thumbnails .slide-image').width();
-        // Update slide width on window resize
-        $(window).on('resize', function() {
-          slideWidth = $('.hero-slide').width();
-          thumbnailWidth = $('.thumbnails .slide-image').width();
-        });
-
-        // Animate Slider Left
-        if ($('.hero-slide.current').attr('id') != 0) {
-          $('body').delegate('.prev-slide', 'click', function () {
-            // prettier-ignore
-            $('.thumbnails .slide-image').animate({
-              left: `+=${thumbnailWidth + 30}`,
-            }, 1000, function() {
-              // Animation complete
-            });
-            // prettier-ignore
-            $('.hero-slide').animate({
-              left: `+=${slideWidth}`,
-            }, 1000, function() {
-              // Animation complete
-            });
-          });
-        };
-
-        // Animate Slider Right
-        if ($('.hero-slide.current').attr('id') != lastSlide) {
-          $('body').delegate('.next-slide', 'click', function () {
-            // prettier-ignore
-            $('.thumbnails .slide-image').animate({
-              left: `-=${thumbnailWidth + 30}`,
-            }, 1000, function() {
-              // Animation complete
-            });
-            // prettier-ignore
-            $('.hero-slide').animate({
-              left: `-=${slideWidth}`,
-            }, 1000, function() {
-              // Animation complete
-            });
-          });
-        };
       });
     </script>
   </body>

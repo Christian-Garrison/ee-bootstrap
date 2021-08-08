@@ -2,8 +2,11 @@
 @import 'reset';
 
 body {
+	color: $gray-200;
 	font-size: $font-size;
 	font-family: $font-family;
+	background-color: $gray-900;
+	overflow-x: hidden;
 }
 
 .no-scroll {
@@ -51,70 +54,96 @@ button {
 	transition: ease-in-out 0.3s;
 
 	&:hover {
-		color: darken($black, 50%);
-		background-color: lighten($primary-color, 10%);
+		color: lighten($black, 75%);
+		background-color: darken($primary-color, 25%);
 	}
 }
 
 .site-header,
 .site-footer {
-	padding: 30px 0;
+	padding: 30px;
 }
 
-.site-footer {
-	color: $gray-50;
-	background-color: $gray-900;
-}
-
-.hero-slider {
-	display: flex;
+.hero {
+	width: 100vw;
 	height: 50vh;
-	overflow: hidden;
+	overflow-x: hidden;
 
-	.hero-slide {
+	.hero-slider {
+		display: flex;
 		position: relative;
-		top: 0;
-		left: 0;
-		width: 100vw;
+		width: inherit;
 		height: inherit;
 
-		.slide-image {
-			background-size: cover;
-			background-position: center;
+		.hero-slide {
 			width: inherit;
-			height: 100%;
+			height: inherit;
+
+			.slide-image {
+				background-size: cover;
+				background-position: center;
+				width: inherit;
+				height: inherit;
+			}
 		}
 	}
 }
 
 .slider-nav {
 	display: flex;
+	justify-content: center;
 	align-items: center;
+	margin: 10px 0;
+
+	.prev-slide {
+		@media screen and ($max-sm) {
+			left: 0;
+		}
+	}
+
+	.next-slide {
+		@media screen and ($max-sm) {
+			right: 0;
+		}
+	}
+
+	.prev-slide,
+	.next-slide {
+		@media screen and ($max-sm) {
+			position: absolute;
+			z-index: 1;
+		}
+	}
 }
 
-.thumbnails {
-	display: flex;
+.thumbnails-wrapper {
 	width: 100%;
-	margin: 15px;
-	overflow: hidden;
+	overflow-x: hidden;
 
-	.slide-image {
+	.thumbnails {
 		display: flex;
-		background-size: cover;
-		background-position: center;
 		position: relative;
-		top: 0;
-		left: 0;
-		flex: 0 0 calc(100% - 30px);
-		height: 175px;
-		margin: 15px;
-		cursor: pointer;
+		width: 100%;
 
-		@media screen and ($min-md) {
-			flex: 0 0 calc(50% - 30px);
-		}
-		@media screen and ($min-lg) {
-			flex: 0 0 calc(33.33333% - 30px);
+		.slide-image {
+			display: flex;
+			background-size: cover;
+			background-position: center;
+			flex: 0 0 calc(100% - 30px);
+			height: 250px;
+			margin: 15px;
+			cursor: pointer;
+
+			&.active {
+				border: 3px solid $primary-color;
+			}
+
+			@media screen and ($min-md) {
+				flex: 0 0 calc(50% - 30px);
+			}
+			@media screen and ($min-lg) {
+				flex: 0 0 calc(33.33333% - 30px);
+			}
 		}
 	}
 }
@@ -154,6 +183,7 @@ button {
 		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
+		border: 1px solid $white;
 		height: 50vh;
 		width: 100%;
 	}
@@ -165,9 +195,35 @@ section {
 
 section .section-details {
 	.title {
-		border-left: 10px solid $black;
+		border-left: 10px solid $gray-50;
+		margin-bottom: 30px;
+		padding-left: 20px;
+	}
+	.subtitle {
+		color: $gray-400;
 		margin-bottom: 15px;
-		padding-left: 10px;
+
+		&-icon {
+			animation: spin 5s infinite;
+		}
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-45deg);
+	}
+	50% {
+		transform: rotate(-15deg);
+	}
+	75% {
+		transform: rotate(90deg);
+	}
+	100% {
+		transform: rotate(0deg);
 	}
 }
 
@@ -175,8 +231,6 @@ section.flex-section {
 	.flex-item {
 		display: flex;
 		flex-direction: column;
-		border: 1.5px solid $black;
-		border-radius: 0;
 		width: calc(100% - 30px);
 		margin: 15px;
 		padding: 0;
@@ -187,6 +241,10 @@ section.flex-section {
 			height: 100%;
 
 			&:hover {
+				button {
+					color: lighten($black, 75%);
+					background-color: darken($primary-color, 25%);
+				}
 			}
 		}
 
@@ -194,7 +252,6 @@ section.flex-section {
 			display: flex;
 			flex-direction: column;
 			height: 100%;
-			padding: 30px;
 		}
 
 		@media screen and ($min-md) {
@@ -202,6 +259,162 @@ section.flex-section {
 		}
 		@media screen and ($min-lg) {
 			width: calc(33.33333% - 30px);
+		}
+	}
+}
+
+.card {
+	background-color: $gray-800;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px $gray-1000;
+	padding: 30px;
+
+	&-icon {
+		font-size: calc(2rem + 2vw);
+		text-align: center;
+	}
+	// prettier-ignore
+	&-heading {
+		color: $gray-200;
+	}
+	&-body {
+		color: $gray-400;
+		padding: 0;
+	}
+}
+
+section.timeline-section {
+	.timeline {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		&-line {
+			background-color: $gray-800;
+			position: absolute;
+			top: 0;
+			height: calc(100% - 30px);
+			width: 2px;
+
+			@media screen and ($max-md) {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			@media screen and ($min-md) {
+				right: calc(80% - 10px);
+			}
+			@media screen and ($min-lg) {
+				right: calc(85% - 10px);
+			}
+		}
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 30px;
+
+			.card {
+				@media screen and ($min-md) {
+					width: 80%;
+				}
+				@media screen and ($min-lg) {
+					width: 85%;
+				}
+			}
+
+			@media screen and ($min-md) {
+				flex-direction: row;
+			}
+		}
+
+		&-date {
+			text-align: center;
+			margin-bottom: 15px;
+			position: relative;
+
+			span.year {
+				display: block;
+				margin-bottom: 15px;
+			}
+
+			span.deco {
+				background-color: $primary-color;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 15px;
+				height: 15px;
+				animation: bounce 2.5s infinite;
+
+				@media screen and ($max-md) {
+					display: none;
+				}
+				@media screen and ($min-md) {
+					left: calc(100% + 9.5px);
+				}
+				@media screen and ($min-lg) {
+					left: calc(100% + 5.5px);
+				}
+			}
+
+			@media screen and ($min-md) {
+				width: 20%;
+				text-align: right;
+				margin-right: 30px;
+			}
+			@media screen and ($min-lg) {
+				width: 15%;
+			}
+		}
+	}
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-25px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+.site-footer {
+	color: $gray-200;
+	background-color: $gray-1000;
+
+	.footer-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.social-media {
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+
+		&-icon {
+			color: $gray-700;
+			font-size: calc(1rem + 1vw);
+			transition: ease-in-out 0.3s;
+
+			&:hover {
+				color: $gray-50;
+				transform: scale(1.05);
+			}
+
+			@media screen and ($max-sm) {
+				font-size: calc(1rem + 2.5vw);
+			}
 		}
 	}
 }
