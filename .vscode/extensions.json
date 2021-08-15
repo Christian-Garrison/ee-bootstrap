@@ -1,0 +1,13 @@
+{
+	"recommendations": [
+		"eamodio.gitlens",
+		"esbenp.prettier-vscode",
+		"exodiusstudios.comment-anchors",
+		"formulahendry.auto-close-tag",
+		"formulahendry.auto-rename-tag",
+		"liximomo.sftp",
+		"stylelint.vscode-stylelint",
+		"syler.sass-indented",
+		"usernamehw.errorlens"
+	]
+}

@@ -1,0 +1,36 @@
+@import '../base/helpers';
+
+.flex-section {
+	.flex-item {
+		display: flex;
+		flex-direction: column;
+		border: 1.5px solid $black;
+		border-radius: 0;
+		width: calc(100% - 30px);
+		margin: 15px;
+		padding: 0;
+
+		.flex-anchor {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+
+			&:hover {
+			}
+		}
+
+		.flex-content {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			padding: 30px;
+		}
+
+		@media screen and ($min-md) {
+			width: calc(50% - 30px);
+		}
+		@media screen and ($min-lg) {
+			width: calc(33.33333% - 30px);
+		}
+	}
+}
