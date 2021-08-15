@@ -1,7 +1,7 @@
 {
   "name": "project-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "Expression Engine Template",
   "main": "gulpfile.js",
   "scripts": {
     "clean:install": "rm -rf node_modules/ && npm i",
