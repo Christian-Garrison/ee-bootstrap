@@ -1,0 +1,32 @@
+{
+	"extends": [
+		"stylelint-config-sass-guidelines",
+		"stylelint-prettier/recommended"
+	],
+	"rules": {
+		"color-hex-length": "short",
+		"color-no-invalid-hex": true,
+		"font-family-no-duplicate-names": true,
+		"function-calc-no-invalid": true,
+		"selector-no-qualifying-type": [
+			true,
+			{
+				"ignore": [
+					"attribute"
+				]
+			}
+		],
+		"max-nesting-depth": [
+			2,
+			{
+				"ignore": [
+					"pseudo-classes"
+				]
+			}
+		],
+		"order/properties-alphabetical-order": true,
+		"selector-class-pattern": "^(?![0-9])[a-zA-Z0-9$-_]+$",
+		"selector-max-compound-selectors": 4,
+		"selector-pseudo-element-colon-notation": "single"
+	}
+}

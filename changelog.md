@@ -1,4 +1,5 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 [Added] for new features.
@@ -17,4 +18,5 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [version] - yyyy-mm-dd
 
 ## [0.0.1] - yyyy-mm-dd
-### 
+
+###

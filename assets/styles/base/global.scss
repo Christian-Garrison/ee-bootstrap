@@ -2,10 +2,10 @@
 @import 'reset';
 
 body {
-	color: $gray-200;
-	font-size: $font-size;
-	font-family: $font-family;
 	background-color: $gray-900;
+	color: $gray-200;
+	font-family: $font-family;
+	font-size: $font-size;
 	overflow-x: hidden;
 }
 
@@ -46,16 +46,16 @@ p {
 }
 
 button {
-	color: $black;
 	background-color: $primary-color;
+	color: $black;
 	font-weight: 700;
-	position: relative;
 	padding: 15px 30px;
+	position: relative;
 	transition: ease-in-out 0.3s;
 
 	&:hover {
-		color: lighten($black, 75%);
 		background-color: darken($primary-color, 25%);
+		color: lighten($black, 75%);
 	}
 }
 
@@ -65,8 +65,8 @@ button {
 }
 
 .site-footer {
-	color: $gray-50;
 	background-color: $gray-900;
+	color: $gray-50;
 }
 
 section {
@@ -79,6 +79,7 @@ section .section-details {
 		margin-bottom: 30px;
 		padding-left: 20px;
 	}
+
 	.subtitle {
 		color: $gray-400;
 		margin-bottom: 15px;
@@ -93,15 +94,19 @@ section .section-details {
 	0% {
 		transform: rotate(0deg);
 	}
+
 	25% {
 		transform: rotate(-45deg);
 	}
+
 	50% {
 		transform: rotate(-15deg);
 	}
+
 	75% {
 		transform: rotate(90deg);
 	}
+
 	100% {
 		transform: rotate(0deg);
 	}

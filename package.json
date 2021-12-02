@@ -1,24 +1,32 @@
 {
-  "name": "project-template",
-  "version": "1.0.0",
-  "description": "Expression Engine Template",
-  "main": "gulpfile.js",
-  "scripts": {
-    "clean:install": "rm -rf node_modules/ && npm i",
-    "gulp": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Christian Garrison <cg@buildmidwestern.com>",
-  "license": "ISC",
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-cond": "^1.0.0",
-    "gulp-notify": "^4.0.0",
-    "gulp-sass": "^5.0.0",
-    "gulp-uglify": "^3.0.2",
-    "sass": "^1.37.5"
-  }
+	"name": "project-template",
+	"version": "1.0.0",
+	"description": "Expression Engine Template",
+	"author": "Christian Garrison <cg@buildmidwestern.com>",
+	"license": "ISC",
+	"scripts": {
+		"clean:install": "rm -rf node_modules/ && npm i",
+		"fix:styles": "npx stylelint \"assets/**/*.{css,scss}\" --fix",
+		"format": "prettier --write \"assets/**/*.{js,ts,css,scss}\"",
+		"gulp": "gulp",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^8.0.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-cond": "^1.0.0",
+		"gulp-notify": "^4.0.0",
+		"gulp-sass": "^5.0.0",
+		"gulp-uglify": "^3.0.2",
+		"sass": "^1.44.0"
+	},
+	"devDependencies": {
+		"prettier": "^2.5.0",
+		"stylelint": "^14.1.0",
+		"stylelint-config-prettier": "^9.0.3",
+		"stylelint-config-sass-guidelines": "^9.0.1",
+		"stylelint-prettier": "^2.0.0"
+	}
 }

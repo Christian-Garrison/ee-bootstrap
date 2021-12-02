@@ -1,11 +1,15 @@
 {
 	"recommendations": [
+		"davidanson.vscode-markdownlint",
 		"eamodio.gitlens",
+		"editorconfig.editorconfig",
+		"ericadamski.carbon-now-sh",
 		"esbenp.prettier-vscode",
 		"exodiusstudios.comment-anchors",
 		"formulahendry.auto-close-tag",
 		"formulahendry.auto-rename-tag",
 		"liximomo.sftp",
+		"streetsidesoftware.code-spell-checker",
 		"stylelint.vscode-stylelint",
 		"syler.sass-indented",
 		"usernamehw.errorlens"
