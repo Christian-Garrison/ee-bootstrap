@@ -16,11 +16,14 @@
 	"prettier.tabWidth": 2,
 	"prettier.trailingComma": "es5",
 	"prettier.useTabs": true,
+	"cSpell.language": "en,lorem",
 	"cSpell.words": ["Parens"],
 	"markdownlint.config": {
-		"MD028": false,
+		"no-trailing-spaces": false,
+		"MD026": false,
 		"MD025": {
 			"front_matter_title": ""
-		}
+		},
+		"MD028": false
 	}
 }

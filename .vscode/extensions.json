@@ -1,5 +1,6 @@
 {
 	"recommendations": [
+		"blackmist.linkcheckmd",
 		"bmewburn.vscode-intelephense-client",
 		"christian-kohler.npm-intellisense",
 		"christian-kohler.path-intellisense",
@@ -28,16 +29,13 @@
 		"formulahendry.auto-rename-tag",
 		"github.vscode-pull-request-github",
 		"liximomo.sftp",
-		"ms-vsliveshare.vsliveshare-audio",
-		"ms-vsliveshare.vsliveshare-pack",
-		"ms-vsliveshare.vsliveshare",
+		"mikestead.dotenv",
 		"pflannery.vscode-versionlens",
 		"ritwickdey.liveserver",
 		"streetsidesoftware.code-spell-checker",
 		"stylelint.vscode-stylelint",
 		"syler.sass-indented",
 		"usernamehw.errorlens",
-		"visualstudioexptteam.vscodeintellicode",
-		"mikestead.dotenv"
+		"visualstudioexptteam.vscodeintellicode"
 	]
 }

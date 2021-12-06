@@ -1,11 +1,10 @@
 @import 'helpers';
-@import 'reset';
 
 body {
-	background-color: $gray-900;
-	color: $gray-200;
-	font-family: $font-family;
-	font-size: $font-size;
+	background-color: var(--gray-900);
+	color: var(--gray-200);
+	font-family: var(--font-family);
+	font-size: var(--font-size);
 	overflow-x: hidden;
 }
 
@@ -13,50 +12,54 @@ body {
 	overflow: hidden;
 }
 
-:is(h1, h2, h3, h4, h5, h6) {
+// prettier-ignore
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	font-weight: 800;
 }
 
-h1 {
-	font-size: calc(2.25rem + 2vw);
+h1,
+.h1 {
+	font-size: calc(2.25em + 2vw);
 }
 
-h2 {
-	font-size: calc(2rem + 1.5vw);
+h2,
+.h2 {
+	font-size: calc(2em + 1.5vw);
 }
 
-h3 {
-	font-size: calc(1.75rem + 1vw);
+h3,
+.h3 {
+	font-size: calc(1.75em + 1vw);
 }
 
-h4 {
-	font-size: calc(1.5rem + 0.5vw);
+h4,
+.h4 {
+	font-size: calc(1.5em + 0.5vw);
 }
 
-h5 {
-	font-size: 1.25rem;
+h5,
+.h5 {
+	font-size: 1.25em;
 }
 
-h6 {
-	font-size: 1rem;
+h6,
+.h6 {
+	font-size: 1em;
 }
 
 p {
+	font-size: 1.6em;
 	line-height: 1.5;
 }
 
-button {
-	background-color: $primary-color;
-	color: $black;
+.button {
+	background-color: var(--brand-primary-color);
+	color: var(--black);
+	font-size: 1.4em;
 	font-weight: 700;
 	padding: 15px 30px;
 	position: relative;
 	transition: ease-in-out 0.3s;
-
-	&:hover {
-		background-color: darken($primary-color, 25%);
-		color: lighten($black, 75%);
-	}
 }
 
 .site-header,
@@ -65,49 +68,23 @@ button {
 }
 
 .site-footer {
-	background-color: $gray-900;
-	color: $gray-50;
+	background-color: var(--gray-900);
+	color: var(--gray-50);
 }
 
 section {
-	padding: $section-padding;
+	padding: var(--vertical-2x);
 }
 
-section .section-details {
+.section-details {
 	.title {
-		border-left: 10px solid $gray-50;
+		border-left: 10px solid var(--gray-50);
 		margin-bottom: 30px;
 		padding-left: 20px;
 	}
 
 	.subtitle {
-		color: $gray-400;
+		color: var(--gray-400);
 		margin-bottom: 15px;
-
-		&-icon {
-			animation: spin 5s infinite;
-		}
-	}
-}
-
-@keyframes spin {
-	0% {
-		transform: rotate(0deg);
-	}
-
-	25% {
-		transform: rotate(-45deg);
-	}
-
-	50% {
-		transform: rotate(-15deg);
-	}
-
-	75% {
-		transform: rotate(90deg);
-	}
-
-	100% {
-		transform: rotate(0deg);
 	}
 }

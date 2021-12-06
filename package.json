@@ -2,7 +2,7 @@
 	"name": "project-template",
 	"version": "1.0.0",
 	"description": "Expression Engine Template",
-	"author": "Christian Garrison <cg@buildmidwestern.com>",
+	"author": "Midwestern Interactive <support@buildmidwestern.com>",
 	"license": "ISC",
 	"scripts": {
 		"clean:install": "rm -rf node_modules/ && npm i",
