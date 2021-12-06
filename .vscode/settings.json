@@ -16,5 +16,11 @@
 	"prettier.tabWidth": 2,
 	"prettier.trailingComma": "es5",
 	"prettier.useTabs": true,
-	"cSpell.words": ["Parens"]
+	"cSpell.words": ["Parens"],
+	"markdownlint.config": {
+		"MD028": false,
+		"MD025": {
+			"front_matter_title": ""
+		}
+	}
 }
