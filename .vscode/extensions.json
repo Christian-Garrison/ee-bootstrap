@@ -37,6 +37,7 @@
 		"stylelint.vscode-stylelint",
 		"syler.sass-indented",
 		"usernamehw.errorlens",
-		"visualstudioexptteam.vscodeintellicode"
+		"visualstudioexptteam.vscodeintellicode",
+		"mikestead.dotenv"
 	]
 }

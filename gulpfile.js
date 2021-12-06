@@ -14,7 +14,7 @@ const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
 const cond = require('gulp-cond');
 const notify = require('gulp-notify');
-var sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('sass'));
 const uglify = require('gulp-uglify');
 
 // ///////////////////////////////////////////////////////////////////////
@@ -64,7 +64,7 @@ function buildComponentScripts(assets, path) {
 }
 
 function buildStyles(assets, path, file = 'false') {
-	var concating = false;
+	const concating = false;
 
 	if (file != 'false') {
 		concating = true;
