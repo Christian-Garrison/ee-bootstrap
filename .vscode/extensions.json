@@ -2,6 +2,7 @@
 	"recommendations": [
 		"blackmist.linkcheckmd",
 		"bmewburn.vscode-intelephense-client",
+		"brapifra.phpserver",
 		"christian-kohler.npm-intellisense",
 		"christian-kohler.path-intellisense",
 		"davidanson.vscode-markdownlint",
