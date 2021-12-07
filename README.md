@@ -34,8 +34,8 @@
    1. It is essential at this part to have a great way to save your EE login and your Database credentials, I suggest using a private vault in 1Password
    2. At this step use your email and set username as `admin` and create a unique password
 4. You will need two tools to get started with database creation during the setup
-   1. [MySQL Community Server](https://tableplus.com/download) - used to host local MySQL Server
-   2. [TablePlus](https://dev.mysql.com/downloads/mysql/) - used for connection to MySQL Server and to create your database
+   1. [MySQL Community Server](https://dev.mysql.com/downloads/mysql/) - used to host local MySQL Server
+   2. [TablePlus](https://tableplus.com/download) - used for connection to MySQL Server and to create your database
 5. Using MySQL Community Server you can Initialize the Database
    1. Go to your machines `System Preferences` and at the bottom you should see MySQL
    2. Open it up and hit `Initialize Database`
