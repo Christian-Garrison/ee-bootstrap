@@ -3,6 +3,8 @@
 	"css.validate": false,
 	"scss.validate": false,
 	"less.validate": false,
+	"stylelint.snippet": ["css", "less", "postcss", "scss", "sass"],
+  "stylelint.validate": ["css", "less", "postcss", "scss", "sass"],
 	"git.ignoreLimitWarning": true,
 	"prettier.enable": true,
 	"prettier.arrowParens": "always",
