@@ -1,2 +1,9 @@
-assets/dist/
-node_modules/
+# Add files here to ignore them from stylelint linting
+
+*/.cache
+*/build
+*/coverage
+*/dist
+*/node_modules
+*/out
+*/public
